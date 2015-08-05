@@ -1,6 +1,6 @@
 [user]
-  name  = Gianni Chiappetta
-  email = gianni@runlevel6.org
+  name  = Daryl Roberts
+  email = daryl.roberts@gmail.com
 
 [alias]
   br   = branch
@@ -86,3 +86,5 @@
   cmd           = diffconflicts mvim $BASE $LOCAL $REMOTE $MERGED
   trustExitCode = true
   keepBackup    = false
+[core]
+	editor = nvim

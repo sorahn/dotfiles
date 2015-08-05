@@ -45,3 +45,10 @@ other than `Meslo` don't forget to update your [.gvimrc](.gvimrc).
 [tree]:     http://mama.indstate.edu/users/ice/tree/
 [v1]:       https://github.com/gf3/dotfiles/tree/v1.0.0
 [vimrc]:    .nvimrc
+
+## Apps to Install
+BetterTouchTool
+Homebrew
+Adium
+1Password
+Dropbox
