@@ -1,6 +1,6 @@
 set fish_greeting
 
-set -x EDITOR vim
+set -x EDITOR nvim
 set -x GREP_COLOR "1;37;45"
 set -x JRUBYOPT "-Xcext.enabled=true"
 set -x LC_ALL en_US.UTF-8
@@ -49,6 +49,7 @@ function tunnel   ; ssh -D 8080 -C -N $argv ; end
 function view     ; nvim -R $argv ; end
 function vp       ; nvim $argv ; end
 
+
 # Completions
 function make_completion --argument-names alias command
     echo "
@@ -73,3 +74,16 @@ if test -d $RBENV_ROOT
   set PATH $RBENV_ROOT/shims $PATH
   rbenv rehash >/dev/null ^&1
 end
+
+
+# functions added by daryl
+function repro    ; . ~/.config/fish/config.fish ; end
+
+# Git Helpers
+function gst      ; git status ; end
+
+# Functions for work
+function use      ; naiad_proxy $argv ; end
+function using    ; naiad_which_proxy ; end
+
+

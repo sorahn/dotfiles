@@ -11,7 +11,7 @@ function fish_prompt
   printf ' in '
 
   set_color $fish_color_cwd
-  printf '%s' (prompt_pwd)
+  printf '%s' (path_with_tilde)
   set_color normal
 
   __git_ps1 ' on '(set_color magenta)'%s'
