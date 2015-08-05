@@ -19,6 +19,13 @@ function naiad_proxy
   set devel_file $devel_dir/devel_server
   set proxy_url "http://devel.streamate.com/INTERNAL/ProxyConfig/index.php"
   
+  function reset_proxy_config
+    if test -d /Applications/ProxyConfig.App
+      killall "ProxyConfig"
+      and open /Applications/ProxyConfig.App
+    end
+  end
+
   # shortcut some of the longer servers
   if count $argv > /dev/null
     switch $argv[1];
@@ -43,6 +50,7 @@ function naiad_proxy
   curl --data "backend=$devel_server&change=1" $proxy_url
   and echo "Switching to $devel_server"
   and echo $devel_server > $devel_file
+  and reset_proxy_config
   
   # or bail out.
   or echo "Failed to change your proxy"
