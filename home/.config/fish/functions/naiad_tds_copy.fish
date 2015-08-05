@@ -8,18 +8,10 @@
 
 function naiad_tds_copy
 
-  # set your username from 'whoami' or get an override from a file in ~/.naiad
-  # If your username for the TDS is differnet than the username on your local
-  # machine, you can create a file called '~/.naiad/username' that contains
-  # the username to use for SSH.
-  set devel_username (whoami)
-  if test -e "~/.naiad/username"
-    set devel_username (cat "~/.naiad/username")
-  end
-  
+  set devel_user (naiad_whoami)
   set devel_server (naiad_which_proxy)
   set devel_directory (path_with_tilde)
-  set server_dir "$devel_server.fciis.net:$devel_directory"
+  set server_dir "$devel_user@$devel_server:$devel_directory"
 
   # Check to see if we're connected to the network
   if count (naiad_print_ips) > "/dev/null"
@@ -28,10 +20,10 @@ function naiad_tds_copy
     if count $argv > /dev/null
       for file in $argv
         set remote_path "$server_dir/$file"
-        scp "./$file" "$remote_path" > "/dev/null"
+        scp -r "./$file" "$remote_path"
       end
     else
-      rsync -qaz ./ "$server_dir/" --exclude '.git'
+      rsync -vaz ./ "$server_dir/" --exclude '.git'
     end
   
   # bail out!
@@ -40,7 +32,7 @@ function naiad_tds_copy
     echo "I'm sorry dave, I'm afraid I can't do that."
     echo "You are not connected to work."
     echo "----------"
+    return 1
   end
-
 
 end

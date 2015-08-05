@@ -83,7 +83,10 @@ function repro    ; . ~/.config/fish/config.fish ; end
 function gst      ; git status ; end
 
 # Functions for work
+function devel    ; naiad_tds_connect $argv ; end
+function j        ; naiad_jump $argv ; end
 function use      ; naiad_proxy $argv ; end
 function using    ; naiad_which_proxy ; end
+
 
 

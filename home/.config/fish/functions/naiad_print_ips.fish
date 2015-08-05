@@ -1,3 +1,4 @@
+#! /usr/bin/fish
 #
 # Copyright (c) 2015 Accretive Technology Group, Inc.  All rights reserved.
 # For use only by Accretive Technology Group, its employees and contractors.

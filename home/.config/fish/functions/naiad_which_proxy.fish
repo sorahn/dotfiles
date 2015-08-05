@@ -1,3 +1,4 @@
+#! /usr/bin/fish
 #
 # Copyright (c) 2015 Accretive Technology Group, Inc.  All rights reserved.
 # For use only by Accretive Technology Group, its employees and contractors.
@@ -9,14 +10,15 @@
 #
 
 function naiad_which_proxy
-  
+
   set devel_dir ~/.naiad
   set devel_file $devel_dir/devel_server
   
   # Check for the directory and the file
   if test -d $devel_dir
     if test -e $devel_file
-      cat $devel_file
+      set server (cat $devel_file)
+      echo "$server.fciis.net"
     end
   end
 end

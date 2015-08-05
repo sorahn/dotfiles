@@ -1,4 +1,4 @@
-function jump
+function naiad_jump
 
   # Switch on the args
 	switch $argv[1];
