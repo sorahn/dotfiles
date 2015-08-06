@@ -20,12 +20,13 @@ function naiad_tds_copy
     if count $argv > /dev/null
       for file in $argv
         set remote_path "$server_dir/$file"
+        naiad_remote_script mkdir -p $remote_path >/dev/null
         scp -r "./$file" "$remote_path"
       end
     else
       rsync -vaz ./ "$server_dir/" --exclude '.git'
     end
-  
+
   # bail out!
   else
     echo "----------"

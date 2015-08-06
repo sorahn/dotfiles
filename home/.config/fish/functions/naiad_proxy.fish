@@ -7,18 +7,18 @@
 #
 # This function switches between TDS servers and saves the last server it
 # switched to a a file to be referenced by other scripts.
-# 
+#
 # Example: `proxy wriggler`
 #
 
 function naiad_proxy
-  
+
   # variable setup
   set devel_server 'wether'
   set devel_dir ~/.naiad
   set devel_file $devel_dir/devel_server
   set proxy_url "http://devel.streamate.com/INTERNAL/ProxyConfig/index.php"
-  
+
   function reset_proxy_config
     if test -d /Applications/ProxyConfig.App
       killall "ProxyConfig"
@@ -51,8 +51,8 @@ function naiad_proxy
   and echo "Switching to $devel_server"
   and echo $devel_server > $devel_file
   and reset_proxy_config
-  
+
   # or bail out.
   or echo "Failed to change your proxy"
-  
-end 
+
+end

@@ -78,9 +78,11 @@ end
 
 # functions added by daryl
 function repro    ; . ~/.config/fish/config.fish ; end
+function s        ; sublime_text $argv ; end
 
 # Git Helpers
 function gst      ; git status ; end
+function dev      ; git_dev_branch $argv ; end
 
 # Functions for work
 function devel    ; naiad_tds_connect $argv ; end

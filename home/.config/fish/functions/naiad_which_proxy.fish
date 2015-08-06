@@ -10,13 +10,13 @@
 
 function naiad_which_proxy
 
-  set devel_dir ~/.naiad
-  set devel_file $devel_dir/devel_server
-  
+  set dir ~/.naiad
+  set file $dir/devel_server
+
   # Check for the directory and the file
-  if test -e $devel_file
-    set server (cat $devel_file)
+  if test -e $file
+    set server (cat $file)
     echo "$server.fciis.net"
   end
-end
+
 end

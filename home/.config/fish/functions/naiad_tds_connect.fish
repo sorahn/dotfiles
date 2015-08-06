@@ -11,14 +11,14 @@
 #
 
 function naiad_tds_connect
-  
+
   # Allow you to specify a custom shell to launch when connecting to a TDS
   set launch_shell bash
   set custom_shell_path ~/.naiad/custom_shell
   if test -e $custom_shell_path
     set launch_shell (cat $custom_shell_path)
   end
-  
+
   set user (naiad_whoami)
   set server (naiad_which_proxy)
   set directory (path_with_tilde)
@@ -31,7 +31,7 @@ function naiad_tds_connect
   #     set branch (git symbolic-ref HEAD 2>/dev/null | sed "s|refs/heads/||")
   #   end
   # end
-  
+
   set user_server "$user@$server"
   set remote_command "cd -P $directory; $launch_shell"
   ssh -t $user_server "$remote_command"
