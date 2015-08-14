@@ -15,6 +15,8 @@ function naiad_jump
 
     case nc;    cd ~/src/naiad.css
 
+    # naiad.web
+    case nw;    cd ~/src/naiad.web/
     case ninc;  cd ~/src/naiad.web/php-libs
     case winc;  cd ~/src/naiad.web/php-libs/WWW
     case s3;    cd ~/src/naiad.web/tmplts/streamate_3.0/www
@@ -22,6 +24,9 @@ function naiad_jump
     case sw;    cd ~/src/naiad.web/www/streamate.com/www
 
     case r;     cd (git_root)
+
+    # notes
+    case notes; cd ~/Dropbox/Work/notes
 
     case self
       set whoami (naiad_whoami)

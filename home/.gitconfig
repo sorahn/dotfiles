@@ -27,10 +27,10 @@
   remote  = green
 
 [color "diff"]
-  meta = yellow 
-  frag = magenta 
-  old  = red 
-  new  = green 
+  meta = yellow
+  frag = magenta
+  old  = red
+  new  = green
 
 [color "status"]
   added     = yellow
@@ -86,5 +86,7 @@
   cmd           = diffconflicts mvim $BASE $LOCAL $REMOTE $MERGED
   trustExitCode = true
   keepBackup    = false
+
 [core]
-	editor = nvim
+  editor = nvim
+  pager = cat

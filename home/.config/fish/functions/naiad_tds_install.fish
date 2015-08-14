@@ -15,6 +15,8 @@ function naiad_tds_install
   set server (naiad_which_proxy)
   set repo (basename (git rev-parse --show-toplevel))
 
+  echo "installing files to $server"
+
   # Special cases for any of the repos that need to do fancy stuff.
   switch $repo
     case 'naiad.css'
