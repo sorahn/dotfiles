@@ -20,6 +20,7 @@ brew cask insall sublime-text3
 brew install caskroom/cask/brew-cask
 brew cask install sublime-text3
 brew cask install iterm2
+brew cask install alfred
 brew cask install sonos
 brew cask install mou
 
