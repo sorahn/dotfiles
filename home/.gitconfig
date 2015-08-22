@@ -90,3 +90,4 @@
 [core]
   editor = nvim
   pager = cat
+	excludesfile = /Users/d1ffus3r/.gitignore_global
