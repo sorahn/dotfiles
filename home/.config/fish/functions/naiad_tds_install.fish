@@ -30,7 +30,7 @@ function naiad_tds_install
 
       # Otherwise run a handful of skins through it, and ignore SM2.
       else
-        make SKIN=sm,onc,drg,phl,rtl,yjl,xvl,xhc,47 SUPPRESS=sm2 FORCE=1
+        make SKIN=sm,onc,drg,phl,rtl,yjl,xvl,xhc,47,cffn SUPPRESS=sm2 FORCE=1
 
       end
       return 0
@@ -41,7 +41,7 @@ function naiad_tds_install
   # get installed.
   if count $argv > /dev/null
     naiad_tds_copy $argv
-    naiad_remote_script "cd $dir; /usr/local/bin/kitty install -r $argv"
+    naiad_remote_script "cd $dir; /usr/local/bin/kitty install -r $argv | grep install"
   end
 
   # set dir ~/.naiad

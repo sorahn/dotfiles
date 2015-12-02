@@ -4,16 +4,21 @@
 
 [alias]
   br   = branch
-  ; Example: g ch master...staging
   ch   = log --cherry --pretty=format:\"%C(auto)%h (%ar) %an: %s\" --date-order --reverse
   ci   = commit
   co   = checkout
-  df   = diff
   g    = grep -I
   lg   = log -p
   loq  = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
   st   = status
   find = log --pretty=\"format:%Cgreen%H %Cblue%s\" --name-status --grep
+
+  # Diffs
+  df    = diff
+  dc    = diff --cached
+  dno   = diff --name-only
+  dns   = diff --name-status
+  dnoc  = diff --name-only --diff-filter=AMRC
 
 [branch]
   autosetuprebase = always
@@ -90,4 +95,11 @@
 [core]
   editor = nvim
   pager = cat
-	excludesfile = /Users/d1ffus3r/.gitignore_global
+	excludesfile = /Users/darylr/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

@@ -22,6 +22,12 @@ function naiad_jump
     case s3;    cd ~/src/naiad.web/tmplts/streamate_3.0/www
     case s2;    cd ~/src/naiad.web/tmplts/streamate_2.0/www
     case sw;    cd ~/src/naiad.web/www/streamate.com/www
+    case stm;   cd ~/src/naiad.web/tmplts/streamate_touch/mobile/www
+
+    # naiad.gfx
+    case g;     cd ~/src/naiad.gfx
+    case g3;    cd ~/src/naiad.gfx/3.0
+    case g2;    cd ~/src/naiad.gfx/2.0/shared
 
     case r;     cd (git_root)
 

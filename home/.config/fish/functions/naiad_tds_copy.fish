@@ -11,20 +11,34 @@ function naiad_tds_copy
   set devel_user (naiad_whoami)
   set devel_server (naiad_which_proxy)
   set devel_directory (path_with_tilde)
-  set server_dir "$devel_user@$devel_server:$devel_directory"
+  set rsync_flags "./ \"$server_dir/\" --exclude \".git\""
 
   # Check to see if we're connected to the network
   if count (naiad_print_ips) > "/dev/null"
 
-    # If there are arguments, scp all the files, if not, rsync the directory
+    # If there are arguments, scp all the files
     if count $argv > /dev/null
-      for file in $argv
-        set remote_path "$server_dir/$file"
-        naiad_remote_script mkdir -p $remote_path >/dev/null
-        scp -r "./$file" "$remote_path"
-      end
+
+      # # # If The first argument is "r", pass a new file list into rsync.
+      # if [ $argv[1] = "r" ]
+      #   echo ($argv[2])
+      #   # rsync -vaz --from-files=<($file_list) $rsync_flags
+
+      # else
+        for file in $argv
+          set server_location "$devel_directory/$file"
+          set remote_dir (dirname $server_location)
+          naiad_remote_script mkdir -p $remote_dir >/dev/null
+
+          set remote_path "$devel_user@$devel_server:$server_location"
+          scp -r "./$file" "$remote_path"
+        end
+      # end
+
+    # if nothing else, rsync the whole directory
     else
-      rsync -vaz ./ "$server_dir/" --exclude '.git'
+      rsync -vaz $rsync_flags
+
     end
 
   # bail out!

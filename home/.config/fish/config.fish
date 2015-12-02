@@ -83,12 +83,18 @@ function s        ; sublime_text $argv ; end
 # Git Helpers
 function gst      ; git status ; end
 function dev      ; git_dev_branch $argv ; end
+function idnoc    ; nti (git dnoc $argv) ; end
+function idnocc   ; idnoc --cached ; end
+function idnom    ; idnoc master ; end
 
 # Functions for work
 function devel    ; naiad_tds_connect $argv ; end
 function j        ; naiad_jump $argv ; end
 function use      ; naiad_proxy $argv ; end
 function using    ; naiad_which_proxy ; end
+function nti      ; naiad_tds_install $argv ; end
+function ntc      ; naiad_tds_copy $argv ; end
+function sag      ; ag -G ".utf8" $argv ; end
 
 function fuck -d 'Correct your previous console command'
     set -l exit_code $status
@@ -103,3 +109,4 @@ function fuck -d 'Correct your previous console command'
 end
 
 
+rvm default
