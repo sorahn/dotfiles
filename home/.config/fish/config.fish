@@ -82,6 +82,7 @@ function s        ; sublime_text $argv ; end
 
 # Git Helpers
 function gst      ; git status ; end
+function gps      ; git push origin head ; end
 function dev      ; git_dev_branch $argv ; end
 function idnoc    ; nti (git dnoc $argv) ; end
 function idnocc   ; idnoc --cached ; end

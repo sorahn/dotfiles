@@ -19,17 +19,23 @@ function naiad_jump
     case nw;    cd ~/src/naiad.web/
     case ninc;  cd ~/src/naiad.web/php-libs
     case winc;  cd ~/src/naiad.web/php-libs/WWW
-    case s3;    cd ~/src/naiad.web/tmplts/streamate_3.0/www
-    case s2;    cd ~/src/naiad.web/tmplts/streamate_2.0/www
-    case sw;    cd ~/src/naiad.web/www/streamate.com/www
-    case stm;   cd ~/src/naiad.web/tmplts/streamate_touch/mobile/www
 
     # naiad.gfx
     case g;     cd ~/src/naiad.gfx
     case g3;    cd ~/src/naiad.gfx/3.0
     case g2;    cd ~/src/naiad.gfx/2.0/shared
 
+    # naiad.streamate
+    case ns;    cd ~/src/naiad.streamate
+    case s3;    cd ~/src/naiad.streamate/tmplts/streamate_3.0/www
+    case s2;    cd ~/src/naiad.streamate/tmplts/streamate_2.0/www
+    case sw;    cd ~/src/naiad.streamate/www
+    case stm;   cd ~/src/naiad.streamate/tmplts/streamate_touch/mobile/www
+
+
     case r;     cd (git_root)
+    case int;   cd ~/src/naiad.internal/www/daryl
+
 
     # notes
     case notes; cd ~/Dropbox/Work/notes
