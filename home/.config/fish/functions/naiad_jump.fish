@@ -13,6 +13,11 @@ function naiad_jump
   # Switch on the args
   switch $argv[1];
 
+    # Black Label Cams
+    case bc;    cd ~/src/blc.client
+    case bs;    cd ~/src/blc.server
+    case bu;    cd ~/src/blc.utils
+
     case nc;    cd ~/src/naiad.css
 
     # naiad.web

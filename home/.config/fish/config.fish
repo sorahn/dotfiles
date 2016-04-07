@@ -82,11 +82,12 @@ function s        ; sublime_text $argv ; end
 
 # Git Helpers
 function gst      ; git status ; end
-function gps      ; git push origin head ; end
+function gps      ; git push origin head $argv ; end
 function dev      ; git_dev_branch $argv ; end
 function idnoc    ; nti (git dnoc $argv) ; end
 function idnocc   ; idnoc --cached ; end
 function idnom    ; idnoc master ; end
+function idiff    ; git diff --color $argv | sed -E "s/^([^-+ ]*)[-+ ]/\\1/" | cat ; end
 
 # Functions for work
 function devel    ; naiad_tds_connect $argv ; end
