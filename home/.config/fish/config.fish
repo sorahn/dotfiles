@@ -88,6 +88,8 @@ function idnoc    ; nti (git dnoc $argv) ; end
 function idnocc   ; idnoc --cached ; end
 function idnom    ; idnoc master ; end
 function idiff    ; git diff --color $argv | sed -E "s/^([^-+ ]*)[-+ ]/\\1/" | cat ; end
+function nid      ; npm i $argv -D
+function nis      ; npm i $argv -s
 
 # Functions for work
 function devel    ; naiad_tds_connect $argv ; end

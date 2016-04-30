@@ -20,6 +20,11 @@
   dns   = diff --name-status
   dnoc  = diff --name-only --diff-filter=AMRC
 
+  nff   = merge --no-ff
+  can   = commit --amend --no-edit
+  rc    = rebase --continue
+  hard  = reset --hard
+
 [branch]
   autosetuprebase = always
 
