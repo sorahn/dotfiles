@@ -24,6 +24,7 @@
   can   = commit --amend --no-edit
   rc    = rebase --continue
   hard  = reset --hard
+  work  = config user.email darylr@accretivetg.com
 
 [branch]
   autosetuprebase = always

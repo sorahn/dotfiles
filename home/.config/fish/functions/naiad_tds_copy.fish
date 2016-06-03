@@ -13,7 +13,7 @@ function naiad_tds_copy
   set devel_directory (path_with_tilde)
   set devel_where "$devel_user@$devel_server"
   set server_dir "$devel_where:$devel_directory"
-  set rsync_flags "./ \"$server_dir/\" --exclude \".git\""
+  set rsync_flags ". \"$server_dir/\" --exclude \".git\""
 
   # Check to see if we're connected to the network
   if count (naiad_print_ips) > "/dev/null"
