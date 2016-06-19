@@ -112,5 +112,4 @@ function fuck -d 'Correct your previous console command'
     end
 end
 
-
-rvm default
+# rvm default
