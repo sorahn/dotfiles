@@ -29,6 +29,7 @@ function naiad_proxy
   # shortcut some of the longer servers
   if count $argv > /dev/null
     switch $argv[1];
+      case bronto;  set devel_server 'brontosaurus'
       case ch;      set devel_server 'coonhound';
       case bh;      set devel_server 'bloodhound';
       case pbw;     set devel_server 'pigbuttworm';

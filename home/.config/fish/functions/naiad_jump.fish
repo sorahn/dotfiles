@@ -37,6 +37,9 @@ function naiad_jump
     case sw;    cd ~/src/naiad.streamate/www
     case stm;   cd ~/src/naiad.streamate/tmplts/streamate_touch/mobile/www
 
+    # scp
+    case sm;    cd ~/src/scp.mobile
+    case ss;    cd ~/src/scp.server
 
     case r;     cd (git_root)
     case int;   cd ~/src/naiad.internal/www/daryl
